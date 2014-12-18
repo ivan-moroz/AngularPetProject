@@ -4,11 +4,12 @@
 <head>
 	<!-- SCROLLS -->
 	<!-- load bootstrap and fontawesome via CDN -->
-	<link rel="stylesheet" href="style/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
 	<!-- SPELLS -->
 	<!-- load angular and angular route via CDN -->
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
 	<script src="../dist/aquascape-0.0.1.js"></script>
 </head>
 <body>
@@ -18,22 +19,16 @@
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Logo</a>
+				<a class="navbar-brand" href="#/">Logo</a>
 			</div>
 
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-				<li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-				<li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
-			</ul>
+			<main-navigation></main-navigation>
 		</div>
 	</nav>
 </header>
 
 <!-- MAIN CONTENT AND INJECTED VIEWS -->
-<div id="main">
-	<div ng-view></div>
-</div>
+<div id="main" ng-view></div>
 
 </body>
 </html>

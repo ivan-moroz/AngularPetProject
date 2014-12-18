@@ -15,9 +15,9 @@ module.exports = function (grunt) {
 				'app/bower_components/angular/angular.js',
 				'app/bower_components/angular-route/angular-route.js',
 				'app/bower_components/angular-sanitize/angular-sanitize.js',
+				'app/bower_components/angular-resource/angular-resource.js',
 				'app/bower_components/angular-mocks/angular-mocks.js',
 				'app/bower_components/restangular/dist/restangular.js',
-				'app/bower_components/underscore/underscore.js',
 				'app/bower_components/underscore/underscore.js',
 				'test/*.js'
 			]
@@ -90,9 +90,9 @@ module.exports = function (grunt) {
 			'jshint',
 			'karma:development',
 			'concat',
-			//'karma:dist',
+			'karma:dist',
 			'uglify',
-			//'karma:minified',
+			'karma:minified',
 			'jsdoc'
 		]);
 

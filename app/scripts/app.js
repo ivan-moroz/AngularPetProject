@@ -6,7 +6,8 @@
  */
 var siteApp = angular.module('siteApp',
 	[
-		'ngRoute'
+		'ngRoute',
+		'ngResource'
 	]
 );
 
@@ -16,7 +17,7 @@ siteApp.config(function($routeProvider) {
 		// route for the home page
 		.when('/', {
 			templateUrl : 'views/pages/home.html',
-			controller  : 'mainController'
+			controller  : 'homeController'
 		})
 
 		// route for the about page
@@ -32,16 +33,7 @@ siteApp.config(function($routeProvider) {
 		});
 });
 
-// create the controller and inject Angular's $scope
-siteApp.controller('mainController', function($scope) {
-	// create a message to display in our view
-	$scope.message = 'Everyone come and see how good I look!';
-});
 
-siteApp.controller('aboutController', function($scope) {
-	$scope.message = 'Look! I am an about page.';
-});
 
-siteApp.controller('contactController', function($scope) {
-	$scope.message = 'Contact us! JK. This is just a demo.';
-});
+
+
