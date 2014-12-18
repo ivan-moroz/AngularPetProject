@@ -11,15 +11,15 @@ module.exports = function (grunt) {
 
 		'meta': {
 			'jsFilesForTesting': [
-				'bower_components/jquery/jquery.js',
-				'bower_components/angular/angular.js',
-				'bower_components/angular-route/angular-route.js',
-				'bower_components/angular-sanitize/angular-sanitize.js',
-				'bower_components/angular-mocks/angular-mocks.js',
-				'bower_components/restangular/dist/restangular.js',
-				'bower_components/underscore/underscore.js',
-				'bower_components/underscore/underscore.js',
-				'test/**/*Spec.js'
+				'app/bower_components/jquery/jquery.js',
+				'app/bower_components/angular/angular.js',
+				'app/bower_components/angular-route/angular-route.js',
+				'app/bower_components/angular-sanitize/angular-sanitize.js',
+				'app/bower_components/angular-mocks/angular-mocks.js',
+				'app/bower_components/restangular/dist/restangular.js',
+				'app/bower_components/underscore/underscore.js',
+				'app/bower_components/underscore/underscore.js',
+				'test/*.js'
 			]
 		},
 
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
 				'options': {
 					'files': [
 						'<%= meta.jsFilesForTesting %>',
-						'source/**/*.js'
+						'app/scripts/**/*.js'
 					]
 				}
 			},
@@ -54,12 +54,12 @@ module.exports = function (grunt) {
 		},
 
 		'jshint': {
-			'beforeconcat': ['source/**/*.js']
+			'beforeconcat': ['app/scripts/**/*.js']
 		},
 
 		'concat': {
 			'dist': {
-				'src': ['source/**/*.js'],
+				'src': ['app/scripts/**/*.js'],
 				'dest': 'dist/<%= pkg.namelower %>-<%= pkg.version %>.js'
 			}
 		},
@@ -76,7 +76,7 @@ module.exports = function (grunt) {
 		},
 
 		'jsdoc': {
-			'src': ['source/**/*.js'],
+			'src': ['app/scripts/**/*.js'],
 			'options': {
 				'destination': 'doc'
 			}
