@@ -1,0 +1,25 @@
+<div id="myCarousel" class="carousel slide">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li ng-repeat="item in mainSliderList" data-target="#myCarousel" ng-class="{true:'active', false: ''}[item.current]" data-slide-to="{{ item.index }}" ></li>
+	</ol>
+
+	<!-- Wrapper for Slides -->
+	<div class="carousel-inner">
+		<div ng-repeat="item in mainSliderList" class="item" ng-class="{true:'active', false: ''}[item.current]">
+			<!-- Set the first background image using inline CSS below. -->
+			<div class="fill" style="background-image:url('{{ item.image }}');"></div>
+			<div class="carousel-caption">
+				<h2>{{ item.description }}</h2>
+			</div>
+		</div>
+	</div>
+
+	<!-- Controls -->
+	<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+		<span class="icon-prev"></span>
+	</a>
+	<a class="carousel-control right" href="#myCarousel" data-slide="next">
+		<span class="icon-next"></span>
+	</a>
+</div>

@@ -5,12 +5,15 @@
 	<!-- SCROLLS -->
 	<!-- load bootstrap and fontawesome via CDN -->
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="style/css/half-slider.css" />
 	<!-- SPELLS -->
 	<!-- load angular and angular route via CDN -->
+	<script src="bower_components/jquery/jquery.js"></script>
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-route/angular-route.js"></script>
 	<script src="bower_components/angular-resource/angular-resource.js"></script>
-	<script src="../dist/aquascape-0.0.1.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="../dist/all-scripts-0.0.1.js"></script>
 </head>
 <body>
 
@@ -18,10 +21,7 @@
 <header>
 	<nav class="navbar navbar-default">
 		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#/">Logo</a>
-			</div>
-
+			<main-logo></main-logo>
 			<main-navigation></main-navigation>
 		</div>
 	</nav>

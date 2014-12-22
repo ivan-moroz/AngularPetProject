@@ -1,0 +1,20 @@
+[
+	{
+		"index": "0",
+		"image": "http://placehold.it/1900x1080&text=Slide One",
+		"current": true,
+		"description": "First slide"
+	},
+	{
+		"index": "1",
+		"image": "http://placehold.it/1900x1080&text=Slide Two",
+		"current": false,
+		"description": "Second slide"
+	},
+	{
+		"index": "2",
+		"image": "http://placehold.it/1900x1080&text=Slide Three",
+		"current": false,
+		"description": "Third slide"
+	}
+]
