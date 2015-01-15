@@ -1,6 +1,13 @@
 /**
  * Created by Ivan_Moroz on 12/22/2014.
  */
+//Fix bug for bootstrap
+angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
+	.controller('CarouselController', ['$scope', '$timeout', '$transition', '$q', function ($scope, $timeout, $transition, $q) {
+	}]).directive('carousel', [function() {
+		return {}
+	}]
+);
 
 siteApp.directive('mainSlider', ['$compile', 'MainSlider', function($compile, MainSlider) {
 	return {
