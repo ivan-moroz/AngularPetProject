@@ -7,7 +7,8 @@
 var siteApp = angular.module('siteApp',
 	[
 		'ngRoute',
-		'ngResource'
+		'ngResource',
+		'bootstrapLightbox'
 	]
 );
 
@@ -30,6 +31,12 @@ siteApp.config(function($routeProvider) {
 		.when('/contact', {
 			templateUrl : 'views/pages/contact.html',
 			controller  : 'contactController'
+		})
+
+		// route for the contact page
+		.when('/gallery', {
+			templateUrl : 'views/pages/gallery.html',
+			controller  : 'galleryController'
 		});
 });
 

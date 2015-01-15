@@ -1,0 +1,32 @@
+#gallery {
+	padding: 0;
+}
+
+#gallery li {
+	display: inline-block;
+	margin: 0 1em 1em 0;
+	width: 10em;
+	list-style-type: none;
+	text-align: center;
+}
+
+@media (max-width: 767px) {
+	#gallery li {
+		margin: 0 0.5em 0.5em 0;
+		width: 6em;
+	}
+}
+
+#loading-bar .bar {
+	height: 5px;
+	background: #fff;
+}
+
+#loading-bar .peg {
+	box-shadow: 1px 0 6px 1px #fff;
+}
+
+#loading-bar-spinner .spinner-icon {
+	border-top-color: #fff;
+	border-left-color: #fff;
+}

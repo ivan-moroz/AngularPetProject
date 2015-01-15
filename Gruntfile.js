@@ -95,5 +95,6 @@ module.exports = function (grunt) {
 			'karma:minified',
 			'jsdoc'
 		]);
-
+	grunt.registerTask('run', ['concat']);
 };
+

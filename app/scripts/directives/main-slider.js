@@ -2,12 +2,12 @@
  * Created by Ivan_Moroz on 12/22/2014.
  */
 
-siteApp.directive('mainSlider', ['$compile', 'MainSliderData', function($compile, MainSliderData) {
+siteApp.directive('mainSlider', ['$compile', 'MainSlider', function($compile, MainSlider) {
 	return {
 		restrict: 'E',
 		replace: true,
 		controller: function($scope) {
-			$scope.mainSliderList = MainSliderData.get();
+			$scope.mainSliderList = MainSlider.get();
 
 
 			$('.carousel').carousel({
