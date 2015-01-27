@@ -2,7 +2,7 @@ var http = require("http");
 var url = require("url");
 var express = require('express');
 var app = express();
-var db = require('./../../mongoDB/db.js');
+var db = require('./../mongoDB/db.js');
 
 var angularBridge = new (require('angular-bridge'))(app, {
 	urlPrefix : '/api/'

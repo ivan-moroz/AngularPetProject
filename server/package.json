@@ -5,11 +5,11 @@
 		"start": "supervisor server.js"
 	},
 	"main": "server.js",
-	"devDependencies": {
+	"dependencies": {
 		"mongodb": 					"*",
 		"mongoose": 				"*",
-		"express": 					">= 1.2.0",
-		"require": 					"2.4.17",
+		"express": 					"*",
+		"require": 					"*",
 		"finalhandler": 			"*",
 		"serve-static":				"*",
 		"angular-bridge":			"*"
