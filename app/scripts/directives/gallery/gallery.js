@@ -14,6 +14,6 @@ siteApp.directive('gallery', ['$compile', 'Gallery', function($compile, Gallery)
 		controller: function($scope) {
 			$scope.images = Gallery.get();
 		},
-		templateUrl: 'views/partial/gallery.html'
+		templateUrl: '../../../views/partial/gallery.html'
 	};
 }]);
