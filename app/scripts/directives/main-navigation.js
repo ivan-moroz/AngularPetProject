@@ -2,7 +2,7 @@
  * Created by Ivan_Moroz on 12/18/2014.
  */
 
-siteApp.directive('mainNavigation', ['$compile', 'MainNavigation', function($compile, MainNavigation) {
+siteApp.directive('mainNavigation', ['MainNavigation', function(MainNavigation) {
 	return {
 		restrict: 'E',
 		replace: true,

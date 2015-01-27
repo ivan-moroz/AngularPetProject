@@ -4,7 +4,7 @@
 
 siteApp.factory('Gallery', ['$resource',
 	function($resource){
-		return $resource('resources/main-gallery.json', {}, {
+		return $resource('/api/galleryItems/:id', {id: '@_id'}, {
 			get: {method:'GET', isArray:true}
 		});
 	}

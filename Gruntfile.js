@@ -47,7 +47,7 @@ module.exports = function (grunt) {
 					'configFile': 'karma.conf.js',
 					'files': [
 						'<%= meta.jsFilesForTesting %>',
-						'dist/<%= pkg.namelower %>-<%= pkg.version %>.min.js'
+						'app/dist/<%= pkg.namelower %>-<%= pkg.version %>.min.js'
 					]
 				}
 			}
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
 		'concat': {
 			'dist': {
 				'src': ['app/scripts/**/*.js'],
-				'dest': 'dist/<%= pkg.namelower %>-<%= pkg.version %>.js'
+				'dest': 'app/dist/<%= pkg.namelower %>-<%= pkg.version %>.js'
 			}
 		},
 

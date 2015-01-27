@@ -8,7 +8,8 @@ var siteApp = angular.module('siteApp',
 	[
 		'ngRoute',
 		'ngResource',
-		'bootstrapLightbox'
+		'bootstrapLightbox',
+		'angularFileUpload'
 	]
 );
 
