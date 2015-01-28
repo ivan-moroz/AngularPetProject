@@ -4,7 +4,7 @@
 
 siteApp.factory('MainSlider', ['$resource',
 	function($resource){
-		return $resource('resources/main-slider.json', {}, {
+		return $resource('/api/mainSliderItems/:id', {id: '@_id'}, {
 			get: {method:'GET', isArray:true}
 		});
 	}

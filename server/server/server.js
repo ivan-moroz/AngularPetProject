@@ -9,6 +9,7 @@ var angularBridge = new (require('angular-bridge'))(app, {
 });
 
 angularBridge.addResource('galleryItems', db.GalleryItems);
+angularBridge.addResource('mainSliderItems', db.MainSliderItems);
 
 
 function start() {
