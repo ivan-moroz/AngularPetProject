@@ -31,6 +31,6 @@ siteApp.directive('mainSlider', ['$compile', 'MainSlider', function($compile, Ma
 				$('#myCarousel').carousel('next');
 			});
 		},
-		templateUrl: '../../../views/partial/main-slider.html'
+		templateUrl: 'views/partial/main/main-slider.html'
 	};
 }]);

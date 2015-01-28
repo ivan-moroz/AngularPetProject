@@ -40,6 +40,6 @@ siteApp.directive('galleryUploadForm', function() {
 //
 //			});
 		},
-		templateUrl: '../../../views/partial/gallery-upload-form.html'
+		templateUrl: '../../../views/partial/gallery/gallery-upload-form.html'
 	};
 });

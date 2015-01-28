@@ -9,6 +9,6 @@ siteApp.directive('mainNavigation', ['MainNavigation', function(MainNavigation) 
 		controller: function($scope) {
 			$scope.mainNavigationList = MainNavigation.get();
 		},
-		templateUrl: '../../../views/partial/main-navigation.html'
+		templateUrl: 'views/partial/main/main-navigation.html'
 	};
 }]);

@@ -3,7 +3,7 @@
  */
 siteApp.config(function (LightboxProvider) {
 	// set a custom template
-	LightboxProvider.templateUrl = 'views/partial/gallery-lightbox.html';
+	LightboxProvider.templateUrl = 'views/partial/gallery/gallery-lightbox.html';
 });
 
 
@@ -18,6 +18,6 @@ siteApp.directive('gallery', ['$compile', 'GalleryService', function($compile, G
 				Lightbox.openModal($scope.images, index);
 			};
 		},
-		templateUrl: '../../../views/partial/gallery.html'
+		templateUrl: '../../../views/partial/gallery/gallery.html'
 	};
 }]);
