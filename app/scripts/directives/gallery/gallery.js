@@ -7,12 +7,16 @@ siteApp.config(function (LightboxProvider) {
 });
 
 
-siteApp.directive('gallery', ['$compile', 'Gallery', function($compile, Gallery) {
+siteApp.directive('gallery', ['$compile', 'GalleryService', function($compile, GalleryService) {
 	return {
 		restrict: 'E',
 		replace: true,
-		controller: function($scope) {
-			$scope.images = Gallery.get();
+		controller: function($scope, Lightbox) {
+			$scope.images = GalleryService.get();
+
+			$scope.openLightboxModal = function (index) {
+				Lightbox.openModal($scope.images, index);
+			};
 		},
 		templateUrl: '../../../views/partial/gallery.html'
 	};
