@@ -12,6 +12,7 @@
 		"require": 					"*",
 		"finalhandler": 			"*",
 		"serve-static":				"*",
-		"angular-bridge":			"*"
+		"angular-bridge":			"*",
+		"body-parser": "*"
 	}
 }

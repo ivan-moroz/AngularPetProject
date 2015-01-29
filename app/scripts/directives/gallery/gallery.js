@@ -7,7 +7,7 @@ siteApp.config(function (LightboxProvider) {
 });
 
 
-siteApp.directive('gallery', ['$compile', 'GalleryService', function($compile, GalleryService) {
+siteApp.directive('gallery', ['GalleryService', function(GalleryService) {
 	return {
 		restrict: 'E',
 		replace: true,
@@ -18,6 +18,6 @@ siteApp.directive('gallery', ['$compile', 'GalleryService', function($compile, G
 				Lightbox.openModal($scope.images, index);
 			};
 		},
-		templateUrl: '../../../views/partial/gallery/gallery.html'
+		templateUrl: 'views/partial/gallery/gallery.html'
 	};
 }]);
