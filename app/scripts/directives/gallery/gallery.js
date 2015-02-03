@@ -18,8 +18,6 @@ siteApp.directive('gallery', ['GalleryService', function(GalleryService) {
 		controller: function($scope, Lightbox) {
 			$scope.images = GalleryService.get();
 
-			console.log($scope.images);
-
 			$scope.openLightboxModal = function (index) {
 				Lightbox.openModal($scope.images, index);
 			};
