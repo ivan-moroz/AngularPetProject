@@ -4,6 +4,10 @@
 siteApp.config(function (LightboxProvider) {
 	// set a custom template
 	LightboxProvider.templateUrl = 'views/partial/gallery/gallery-lightbox.html';
+
+	LightboxProvider.getImageUrl = function (image) {
+		return image.path;
+	};
 });
 
 
@@ -13,6 +17,8 @@ siteApp.directive('gallery', ['GalleryService', function(GalleryService) {
 		replace: true,
 		controller: function($scope, Lightbox) {
 			$scope.images = GalleryService.get();
+
+			console.log($scope.images);
 
 			$scope.openLightboxModal = function (index) {
 				Lightbox.openModal($scope.images, index);

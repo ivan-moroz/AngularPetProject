@@ -23,6 +23,21 @@
 		"karma-jasmine":            "*",
 		"karma-chrome-launcher":    "*"
 	},
+
+	"dependencies": {
+		"mongodb": 					"*",
+		"mongoose": 				"*",
+		"mongoose-file":			"*",
+		"mongoose-thumbnail": 		"*",
+		"express": 					"*",
+		"require": 					"*",
+		"finalhandler": 			"*",
+		"serve-static":				"*",
+		"angular-bridge":			"*",
+		"body-parser": 				"*",
+		"formidable":				"*"
+	},
+
 	"scripts": {
 		"postinstall": "bower install"
 	}
