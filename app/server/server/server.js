@@ -30,8 +30,6 @@ app.post('/api/galleryUpload', function(req, res, next){
 angularBridge.addResource('galleryItems', db.GalleryItems);
 angularBridge.addResource('mainSliderItems', db.MainSliderItems);
 
-
-//angularBridge.addResource('galleryUpload', db.GalleryItems);
 function start() {
 	var server = app.listen(8888);
 }

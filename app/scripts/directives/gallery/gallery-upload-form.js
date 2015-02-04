@@ -14,7 +14,7 @@ siteApp.directive('galleryUploadForm', function() {
 					var type = '|' + item.type.slice(item.type.lastIndexOf('/') + 1) + '|';
 					return '|jpg|png|jpeg|bmp|gif|'.indexOf(type) !== -1;
 				}
-			})
+			});
 
 //			uploader.onWhenAddingFileFailed = function(item /*{File|FileLikeObject}*/, filter, options) {
 //				console.info('onWhenAddingFileFailed', item, filter, options);
