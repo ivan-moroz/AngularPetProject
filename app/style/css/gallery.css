@@ -30,3 +30,12 @@
 	border-top-color: #fff;
 	border-left-color: #fff;
 }
+
+.gallery-upload-form {
+	padding: 20px;
+}
+
+.upload-btn {
+	float: left;
+	margin: -41px 0 0 5px;
+}

@@ -38,6 +38,12 @@ siteApp.config(function($routeProvider) {
 		.when('/gallery', {
 			templateUrl : 'views/pages/gallery.html',
 			controller  : 'galleryController'
+		})
+
+		// route for the gallery upload page
+		.when('/galleryUpload', {
+			templateUrl : 'views/pages/galleryUpload.html',
+			controller  : 'galleryUploadController'
 		});
 });
 
