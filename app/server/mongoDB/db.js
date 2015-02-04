@@ -3,8 +3,6 @@ var db = mongoose.connect('mongodb://localhost/angularPetProjectDB');
 var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 var filePluginLib = require('mongoose-file');
-var filePlugin = filePluginLib.filePlugin;
-var make_upload_to_model = filePluginLib.make_upload_to_model;
 
 
 var thumbnailPluginLib = require('mongoose-thumbnail');
@@ -15,11 +13,6 @@ var GallerySchema = new Schema({
 	name: String,
 	path: String
 });
-
-//GallerySchema.plugin(thumbnailPlugin, {
-//	name: "photo",
-//	inline: false
-//});
 
 var MainSliderSchema = new Schema({
 	index: Number,
@@ -48,10 +41,10 @@ var MainSliderSchema = new Schema({
 //	console.log(entity);
 //};
 //
-GallerySchema.methods.post = function(entity) {
-	console.log("Posted:");
-	console.log(entity);
-};
+//GallerySchema.methods.post = function(entity) {
+//	console.log("Posted:");
+//	console.log(entity);
+//};
 ////
 //GallerySchema.methods.delete = function(entity) {
 //	console.log("Deleted:");
