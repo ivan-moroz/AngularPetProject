@@ -13,12 +13,11 @@ siteApp.controller('logInController', function($scope, $http) {
 		};
 
 		$http.post("api/authenticate", null, config)
-			.success(function (data, status, headers, config) {
+		.success(function (data, status, headers, config) {
 			$scope.result = data;
 			console.log($scope.result);
 		})
-		.error(function (data, status, headers, config)
-		{
+		.error(function (data, status, headers, config) {
 			$scope.result = "SUBMIT ERROR";
 		});
 	}
