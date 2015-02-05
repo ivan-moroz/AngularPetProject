@@ -27,6 +27,15 @@ app.post('/api/galleryUpload', function(req, res, next){
 	});
 });
 
+app.post('/api/authenticate', function(req, res, next){
+	requestHandler.authenticate(req,
+		function (message){
+			res.writeHead(200, {"Content-Type": "text/html"});
+			res.write(message);
+			res.end();
+		});
+});
+
 angularBridge.addResource('galleryItems', db.GalleryItems);
 angularBridge.addResource('mainSliderItems', db.MainSliderItems);
 

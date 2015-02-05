@@ -1,5 +1,6 @@
 var db = require('./../mongoDB/db.js');
 var formidable = require("formidable");
+var url = require("url");
 
 function uploadToGallery(req, successCallback, errorCallback){
 	var form = new formidable.IncomingForm();
@@ -41,4 +42,17 @@ function uploadToGallery(req, successCallback, errorCallback){
 	form.parse(req);
 }
 
+function authenticate(req, callback){
+	var parsedUrl = url.parse(req.url, true); // true to get query as object
+	var queryAsObject = parsedUrl.query;
+	var user = JSON.parse(queryAsObject.user);
+
+	if(user.email == 'ivan') {
+		callback('SUCCESS');
+	} else {
+		callback('ERROR');
+	}
+}
+
 exports.uploadToGallery = uploadToGallery;
+exports.authenticate = authenticate;

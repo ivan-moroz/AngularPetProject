@@ -44,6 +44,11 @@ siteApp.config(function($routeProvider) {
 		.when('/galleryUpload', {
 			templateUrl : 'views/pages/galleryUpload.html',
 			controller  : 'galleryUploadController'
+		})
+
+		//route for the login page
+		.when('/login', {
+			templateUrl : 'views/pages/logIn.html'
 		});
 });
 
