@@ -35,7 +35,8 @@
 		"serve-static":				"*",
 		"angular-bridge":			"*",
 		"body-parser": 				"*",
-		"formidable":				"*"
+		"formidable":				"*",
+		"bcrypt-nodejs": 			"*"
 	},
 
 	"scripts": {

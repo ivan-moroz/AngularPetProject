@@ -47,8 +47,35 @@ function authenticate(req, callback){
 	var queryAsObject = parsedUrl.query;
 	var user = JSON.parse(queryAsObject.user);
 
-	if(user.email == 'ivan') {
-		callback('SUCCESS');
+	db.User.find({email: user.email}, function(err, foundUser){
+		if (err) throw err;
+
+		// test a matching password
+		foundUser[0].comparePassword(user.password, function(err, isMatch) {
+			if (err) throw err;
+			if(isMatch) {
+				callback('SUCCESS');
+			} else {
+				callback('ERROR');
+			}
+		});
+	});
+}
+
+function register(req, callback){
+	var parsedUrl = url.parse(req.url, true); // true to get query as object
+	var queryAsObject = parsedUrl.query;
+	var user = JSON.parse(queryAsObject.user);
+
+	if(user) {
+		var user = new db.User(user);
+		user.save(function(err) {
+			if (err) {
+				callback('ERROR');
+			} else {
+				callback('SUCCESS');
+			}
+		});
 	} else {
 		callback('ERROR');
 	}
@@ -56,3 +83,4 @@ function authenticate(req, callback){
 
 exports.uploadToGallery = uploadToGallery;
 exports.authenticate = authenticate;
+exports.register = register;

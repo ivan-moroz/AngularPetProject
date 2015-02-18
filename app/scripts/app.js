@@ -49,7 +49,11 @@ siteApp.config(function($routeProvider) {
 		//route for the login page
 		.when('/login', {
 			templateUrl : 'views/pages/logIn.html'
-		});
+		})
+
+		.when('/register', {
+			templateUrl : 'views/pages/register.html'
+		})
 });
 
 
